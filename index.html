@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <title>IK Phones</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- شريط التنقل -->
+  <header>
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li class="dropdown">
+          <a href="index.html">نوع الهاتف ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="Apple.html">Apple</a></li>
+            <li><a href="samaung.html">Samsung</a></li>
+            <li><a href="Huawei.HTML">Huawei</a></li>
+            <li><a href="motorolaa.html">Motorola</a></li>
+          </ul>
+        </li>
+        <li><a href="To communicate.html">إتصل بنا</a></li>
+        <li><a href="ABOUT ME.html">حول</a></li>
+        <li><a href="Log in.html">تسجيل الدخول</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- السلايدر -->
+  <section class="slideshow-container">
+
+    <div class="mySlides fade">
+      <a href="Iphone 12Pro Max.html">
+        <img src="Images/Iphone 12Pro Max1.jpg" alt="Iphone 12Pro Max">
+        <div class="text">Iphone 12Pro Max</div>
+      </a>
+    </div>
+
+    <div class="mySlides fade">
+      <a href="Samsung s20Ultra.html">
+        <img src="Images/Samsung s20Ultra1.jpg" alt="Samsung s20Ultra">
+        <div class="text">Samsung s20Ultra</div>
+      </a>
+    </div>
+
+    <div class="mySlides fade">
+      <a href="Huawei p40Pro.html">
+        <img src="Images/Huawei p40Pro1.jpg" alt="Huawei p40Pro">
+        <div class="text">Huawei p40Pro</div>
+      </a>
+    </div>
+
+    <div class="mySlides fade">
+      <a href="Motorola edge.html">
+        <img src="Images/Motorola edge1.jpg" alt="Motorola edge">
+        <div class="text">Motorola edge</div>
+      </a>
+    </div>
+
+    <!-- أزرار السلايدر -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </section>
+
+  <!-- النقاط -->
+  <div class="dots">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+<section class="featured-phones">
+  <div class="phone-carde">
+    <img src="Images/Iphone 12Pro Max.jpg" alt="Iphone 12Pro Max">
+    <h3>Iphone 12Pro Max</h3>
+    <p>أحدث هواتف آبل بتصميم مبتكر واداء مذهل</p>
+  </div>
+  <div class="phone-carde">
+    <img src="Images/Samsung s20Ultra1.jpg" alt="Samsung s20Ultra">
+    <h3>Samsung s20Ultra</h3>
+    <p>كاميرات إحترافية وشاشة مذهلة من سامسونج</p>
+  </div>
+  <div class="phone-carde">
+    <img src="Images/Huawei p40Pro1.jpg" alt="Huawei p40Pro">
+    <h3>Huawei p40Pro</h3>
+    <p>هاتف هوهوي المتطور بكاميرات Leica الرائعة</p>
+  </div>
+  <div class="phone-carde">
+    <img src="Images/Motorola edge1.jpg" alt="Motorola edge">
+    <h3>Motorola edge</h3>
+    <p>تصميم مميز واداء قوي من موتورولا</p>
+  </div>
+</section>
+  <!-- الفوتر -->
+  <footer>
+    <div class="socials">
+      <a href="https://www.youtube.com"><img src="Images/youtubelogo.png" class="youtube" alt="YouTube"></a>
+      <a href="https://www.facebook.com/asamh.alkhtyb.440439"><img src="Images/facebooklogo.png" class="facebook" alt="Facebook"></a>
+      <a href="https://www.instagram.com"><img src="Images/2.jpg" class="instagram" alt="Instagram"></a>
+      <a href="713132946"><img src="Images/1.png" class="whats" alt="واتس أب "></a>
+    </div>
+    <p>® جميع الحقوق محفوظة لـ أسامة الخطيب </p>
+  </footer>
+
+  <!-- سكربت السلايدر -->
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    // التنقل بالأسهم
+    function plusSlides(n) {
+      slideIndex += n - 1;
+      showSlides();
+    }
+
+    // التنقل بالنقاط
+    function currentSlide(n) {
+      slideIndex = n - 1;
+      showSlides();
+    }
+
+    // عرض الشرائح + التشغيل التلقائي
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+
+      setTimeout(showSlides, 5000); // 5 ثواني
+    }
+  </script>
+
+</body>
+</html>

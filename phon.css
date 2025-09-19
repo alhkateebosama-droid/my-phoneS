@@ -1,0 +1,310 @@
+
+.add-to-cart {
+        cursor: pointer;
+        padding: 10px 15px;
+        border: none;
+        color: #fff;
+        background: linear-gradient(90deg, #4a6491, #2c3e50);
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        font-size: 14px;
+    }
+    .add-to-cart i {
+        margin-left: 5px;
+    }
+    .thumbnail.active {
+        border: 2px solid #4a6491;
+    }
+    .thumbnail {
+        cursor: pointer;
+        width: 60px;
+        margin: 5px;
+        border-radius: 5px;
+    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* رأس الصفحة */
+header {
+    background: linear-gradient(90deg, #2c3e50, #4a6491);
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffd700;
+}
+
+/* محتوى المنتج - التصميم الأفقي */
+
+.product-horizontal {
+    display: flex;
+    padding: 30px;
+    gap: 40px;
+}
+
+.product-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main-image {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.main-image:hover {
+    transform: scale(1.02);
+}
+
+.thumbnail-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s, transform 0.3s;
+    object-fit: cover;
+}
+
+.thumbnail:hover, .thumbnail.active {
+    opacity: 1;
+    transform: scale(1.1);
+    border: 2px solid #4a6491;
+}
+
+.product-info {
+    flex: 1;
+    padding: 20px 0;
+}
+
+.product-title {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.product-description {
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.product-features {
+    margin: 25px 0;
+}
+
+.feature-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.feature-list i {
+    color: #4a6491;
+    font-size: 18px;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.current-price {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.original-price {
+    font-size: 22px;
+    text-decoration: line-through;
+    color: #999;
+}
+
+.discount {
+    background: #ff6b6b;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.add-to-cart {
+    background: linear-gradient(90deg, #4a6491, #2c3e50);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.add-to-cart:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.wishlist {
+    background: #f8f9fa;
+    color: #2c3e50;
+    border: 2px solid #e2e6ea;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.wishlist:hover {
+    background: #e2e6ea;
+}
+
+/* وسائل التواصل */
+.social-section {
+    text-align: center;
+    padding: 30px;
+    background: #f8f9fa;
+    border-top: 1px solid #eaecef;
+}
+
+.social-section h3 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(45deg, #4a6491, #2c3e50);
+    color: white;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: transform 0.3s, background 0.3s;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #2c3e50, #4a6491);
+}
+
+/* التكيف مع الشاشات الصغيرة */
+@media (max-width: 968px) {
+    .product-horizontal {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .feature-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .thumbnail-container {
+        flex-wrap: wrap;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
